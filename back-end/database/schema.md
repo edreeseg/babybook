@@ -19,8 +19,8 @@
 | created_at  | Datetime, Not Nullable, Defualt to NOW()  |
 
 ## BookUsers
-| Attribute | Type                                     |
-| --------- | ---------------------------------------- |
+| Attribute | Type                                      |
+| --------- | ----------------------------------------- |
 | user_id    | UUID, Foreign Key references id on Users |
 | book_id    | UUID, Foreign Key references id on Books |
 | created_at | Datetime, Not Nullable, Defualt to NOW() |
