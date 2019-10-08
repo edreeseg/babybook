@@ -7,6 +7,7 @@
 | username   | Text, Unique, Not Nullable               |
 | email      | Text, Unique, Not Nullable               |
 | password   | Text, Unique, Not Nullable               |
+| thumbnail  | Text, Default to blank portrait          |
 | created_at | Datetime, Not Nullable, Default to NOW() |
 
 ## Books
@@ -34,9 +35,11 @@
 | created_at  | Datetime, Not Nullable, Defualt to NOW() |
 
 ## EntryComments
-| Attribute  | Type                                     |
-| ---------- | ---------------------------------------- |
-| id         | UUID, Primary                            |
-| content    | Text, Not Nullable                       |
-| user_id    | UUID, Foreign Key references id on Users |
-| created_at | Datetime, Not Nullable, Defualt to NOW() |
+| Attribute  | Type                                           |
+| ---------- | ---------------------------------------------- |
+| id         | UUID, Primary                                  |
+| content    | Text, Not Nullable                             |
+| entry_id   | UUID, Foreign Key references id on BookEntries |
+| user_id    | UUID, Foreign Key references id on Users       |
+| created_at | Datetime, Not Nullable, Defualt to NOW()       |
+
